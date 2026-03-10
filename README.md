@@ -51,6 +51,26 @@ The dataset contains **product-level inventory and pricing information**.
 
 ---
 
+## Data Cleaning
+
+During data exploration, several data quality issues were identified and resolved before performing the analysis.
+
+### Issues Identified
+
+1. **File Encoding Issue**
+   - The dataset was not in UTF-8 format.
+   - Converted the dataset to UTF-8 format using Excel.
+
+2. **Invalid Product Record**
+   - A product with **MRP = 0** was identified.
+   - Since this represents invalid pricing data, the record was removed from the dataset.
+
+3. **Price Values Stored in Paise**
+   - The columns **mrp** and **discounted_selling_price** were stored in paise.
+   - Converted these values to **rupees by dividing them by 100**.
+
+---
+
 ## Tools & Skills Demonstrated
 
 ### Tools Used
