@@ -125,7 +125,7 @@ LIMIT 5;
 ## Query Output
 
 ```markdown
-![Query Output](images/highest_avg_discount_category.png)
+!(images/highest_avg_discount_category.png)
 ```
 
 ---
