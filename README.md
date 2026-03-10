@@ -1,2 +1,100 @@
 # sql-inventory-analysis-zepto
 SQL analysis of zepto inventory dataset to uncover pricing patterns, stock availability, and category-level insights.
+# Zepto Inventory Analysis — SQL Data Exploration & Business Insights
+
+**Skills:** **SQL**, **Data Cleaning**, **Data Exploration**, **Aggregations**, **Business Analysis**
+
+---
+
+## Project Summary
+
+This project analyzes **Zepto inventory data using SQL** to explore **product pricing patterns**, **discount strategies**, **stock availability**, and **category-level inventory performance**.
+
+The analysis identifies **high-discount products**, **stock shortages**, and **category-level revenue opportunities**, helping understand how **quick-commerce companies manage large product inventories**.
+
+---
+
+## Business Problem
+
+Quick-commerce companies like **Zepto** manage **thousands of products** with varying prices, packaging sizes, and discount strategies.
+
+Without proper inventory analysis, companies may face:
+
+- **stock shortages**
+- **inefficient inventory management**
+- **inconsistent pricing strategies**
+- **missed revenue opportunities**
+
+This project analyzes Zepto’s inventory dataset to uncover **discount trends**, **product distribution**, and **category-level performance** using **SQL**.
+
+---
+
+## Dataset Information
+
+**Dataset Source:** Kaggle — **Zepto Inventory Dataset**
+
+The dataset contains **product-level inventory and pricing information**.
+
+### Dataset Columns
+
+| Column | Description |
+|------|-------------|
+| **sku_id** | Unique product identifier |
+| **name** | Product name |
+| **category** | Product category |
+| **mrp** | Maximum Retail Price |
+| **discounted_selling_price** | Selling price |
+| **discount_percent** | Discount percentage |
+| **available_quantity** | Available inventory quantity |
+| **weight_in_gms** | Product weight |
+| **out_of_stock** | Product stock status |
+
+---
+
+## Tools & Skills Demonstrated
+
+### Tools Used
+
+- **SQL (PostgreSQL)**
+
+### SQL Techniques Used
+
+- **Data Cleaning**
+- **Aggregations (SUM, AVG, COUNT)**
+- **Filtering (WHERE)**
+- **Conditional Logic (CASE)**
+- **Grouping (GROUP BY)**
+- **Sorting (ORDER BY)**
+
+---
+
+## Analysis Questions
+
+Key questions explored in this analysis:
+
+1. Which products offer the **highest discount percentage**?
+2. Which **high-MRP products are currently out of stock**?
+3. What is the **estimated revenue contribution of each category**?
+4. Which products have **high MRP but low discounts**?
+5. Which categories offer the **highest average discount percentage**?
+6. Which products provide the **best price per gram**?
+7. How can products be **categorized by weight (Low, Medium, Bulk)**?
+8. What is the **total inventory weight per category**?
+
+---
+
+## Example SQL Query
+
+Below is the SQL query used to identify **categories offering the highest average discount percentage**.
+
+```sql
+SELECT
+    category,
+    ROUND(AVG(discount_percent), 2) AS avg_discount_percent
+FROM
+    zepto
+GROUP BY
+    category
+ORDER BY
+    avg_discount_percent DESC
+LIMIT 5;
