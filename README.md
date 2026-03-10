@@ -104,8 +104,6 @@ LIMIT 5;
 
 ## Query Output
 
-*(After uploading your screenshot to the images folder, display it here)*
-
 ```markdown
 ![Query Output](images/highest_avg_discount_category.png)
 ```
