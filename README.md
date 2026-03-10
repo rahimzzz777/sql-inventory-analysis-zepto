@@ -1,6 +1,6 @@
-# sql-inventory-analysis-zepto
-SQL analysis of zepto inventory dataset to uncover pricing patterns, stock availability, and category-level insights.
 # Zepto Inventory Analysis — SQL Data Exploration & Business Insights
+
+SQL analysis of zepto inventory dataset to uncover pricing patterns, stock availability, and category-level insights.
 
 **Skills:** **SQL**, **Data Cleaning**, **Data Exploration**, **Aggregations**, **Business Analysis**
 
@@ -90,7 +90,7 @@ Below is the SQL query used to identify **categories offering the highest averag
 ```sql
 SELECT
     category,
-    ROUND(AVG(discount_percent), 2) AS avg_discount_percent
+    ROUND(AVG(discount_percent),2) AS avg_discount_percent
 FROM
     zepto
 GROUP BY
@@ -98,3 +98,31 @@ GROUP BY
 ORDER BY
     avg_discount_percent DESC
 LIMIT 5;
+```
+
+---
+
+## Query Output
+
+*(After uploading your screenshot to the images folder, display it here)*
+
+```markdown
+![Query Output](images/highest_avg_discount_category.png)
+```
+
+---
+
+## Key Insights
+
+Key insights discovered during the analysis:
+
+- Certain categories offer **significantly higher discounts**, suggesting **aggressive promotional strategies**.
+- Some **high-MRP products are frequently out of stock**, indicating **demand–supply imbalance**.
+- **Price-per-gram analysis** highlights products providing **better value for customers**.
+- Most products fall under **low to medium weight categories**, aligning with **quick-commerce delivery models**.
+
+---
+
+## Author
+
+**Abdul Rahim**
